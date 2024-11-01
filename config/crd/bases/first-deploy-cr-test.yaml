@@ -1,0 +1,11 @@
+apiVersion: app.kubebuilder.io/v1
+kind: DeployObject
+metadata:
+  labels:
+    app.kubernetes.io/name: project
+    app.kubernetes.io/managed-by: kustomize
+  name: deployobject-sample
+spec:
+  # TODO(user): edit the following value to ensure the number
+  # of Pods/Instances your Operand must have on cluster
+  size: 1  #这个size就是我们在CRD-types.go中定义的字段,这就相当于自定义字段了，后面的问题是通过这个字段要达到什么状态
